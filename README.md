@@ -10,9 +10,9 @@ Ans:-
     The main configuration file for Postfix is usually located at /etc/postfix/main.cf. <br>
       - We can edit this file using a text editor like nano  <br>
            ***sudo nano /etc/postfix/main.cf*** <br>
-      - In the file, modify the line  inet_interfaces = all to inet_interfaces = loopback-only 
+      - In the file, modify the line  inet_interfaces = all to inet_interfaces = loopback-only <br>
  <br> Step 3: Install mailutils.<br>
-           ***sudo apt install mailutils***  
+           ***sudo apt install mailutils***  <br>
   <br> Step 4: Test the Configuration.<br>
       - We can now test our Postfix configuration by sending a test email using the following command.<br>
         ***echo "This is the body of the email" | mail -s "Subject Line" email@mydomain.com*** 
