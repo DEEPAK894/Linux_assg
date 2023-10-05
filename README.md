@@ -1,9 +1,9 @@
 # Linux_assignment
 
 1)  Configure smtp in localhost.<br>
-Ans:-<br>
+Ans:-
  Step 1: Install Postfix  on our Linux machine using the following command:<br>
-     <br>   ***sudo apt install postfix***<br>
+        ***sudo apt install postfix***<br>
  Step 2: Configure Postfix.<br>
       - During the configuration, choose "Internet Site" and proceed.
         If needed, we can customize our mail settings. <br>
@@ -19,7 +19,7 @@ Ans:-<br>
 
     <br>    
 2)  Create a user in your localhost, which should not be able to execute the sudo command. <br>
-Ans:
+Ans:-
      - To create a new user, use the following command<br>
            ***sudo useradd newuser*** <br><br>
 By default, on most Unix-based systems, regular users are not in the sudo group, so they do not have sudo privileges.
