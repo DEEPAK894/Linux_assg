@@ -1,5 +1,5 @@
-
- 6. Create a service with the name showtime , after starting the service, every minute it should print the current time in a file in the user home directory.  
+ 6. Create a service with the name showtime , after starting the service, every minute it should print the current 
+     time in a file in the user home directory.  
     Ex:-
        sudo service showtime start   -> It should start writing in file.
        sudo service showtime stop   -> It should stop writing in file.
