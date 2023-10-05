@@ -17,9 +17,8 @@ Step 1: Install Postfix  on our Linux machine using the following command:<br>
            ***sudo apt install mailutils***  <br>
   Step 4: Test the Configuration.<br>
         We can now test our Postfix configuration by sending a test email using the following command.<br>
-        ***echo "This is the body of the email" | mail -s "Subject Line" email@mydomain.com*** 
-
-    <br>    
+        ***echo "This is the body of the email" | mail -s "Subject Line" email@mydomain.com*** <br>
+  
 2)  Create a user in your localhost, which should not be able to execute the sudo command. <br>
 Ans:-
      - To create a new user, use the following command<br>
