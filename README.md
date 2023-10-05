@@ -29,8 +29,10 @@ By default, on most Unix-based systems, regular users are not in the sudo group,
 Ans:-
  Step 1: Create a Shell Script.
       - Create a new file, describe.sh in the directory /usr/local/bin, and add the following lines to it:
-            #!/bin/bash
+```
+         #!/bin/bash
             ls -a
+```
    This script simply runs the ls -a command, which lists all files and folders in the current directory,
    including hidden files
  Step 2: Make the Script Executable:
@@ -108,17 +110,17 @@ Ans:-
     Ans:-
        Step 1: Create the Shell Script hat will write the current time to a file in the user's home directory.
                - Name the script as showtime.sh and write below content into the file:
-               #!/bin/bash
+            ```   #!/bin/bash
                FILE_PATH="/home/sigmoid/showtime_output.txt"
                while true; do
                echo $(date) >> "$FILE_PATH"
                sleep 60  
-               done
+               done ```
        Step 2: Make the script executable
             command = { chmod +x showtime.sh }
        Step 3: Create a systemd service file named showtime.service in the /etc/systemd/system/ directory and write the
                below code into that file.
-                  [Unit]
+                ```  [Unit]
                   Description=Showtime Service
                   After=network.target
                   [Service]
@@ -127,7 +129,7 @@ Ans:-
                   User=sigmoid
                   Group=sigmoid
                   [Install]
-                  WantedBy=multi-user.target
+                  WantedBy=multi-user.target ```
        Step 4:  Reload Systemd:
                 After making changes to the service unit file, you need to reload the systemd manager configuration.                    Run the following command to reload systemd:
                   command = { sudo systemctl daemon-reload }
