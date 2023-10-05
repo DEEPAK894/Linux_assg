@@ -1,0 +1,7 @@
+5. Configure your system in such a way that any user of your system creates a file then there should not be permission to do any activity in that file.
+Ans:-
+  Step 1: Use umask command for specific session      
+        ***umask 0777***
+  Step 2: Apply umask to root
+        ***sudo nano bash.bashrc  or sudo nano /etc/login.defs*** 
+        - Scroll down and change umask 022 to 0777
