@@ -9,7 +9,6 @@ Step 1: Install Postfix  on our Linux machine using the following command:
         2. If needed, we can customize our mail settings.
         3. The main configuration file for Postfix is usually located at /etc/postfix/main.cf. 
         4. We can edit this file using a text editor like nano  
-           
            ***sudo nano /etc/postfix/main.cf*** 
         5. In the file, modify the line  inet_interfaces = all to inet_interfaces = loopback-only 
         
