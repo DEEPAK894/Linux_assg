@@ -4,8 +4,8 @@
 Ans:-
  <br>Step 1: Install Postfix  on our Linux machine using the following command:
               <br>   ***sudo apt install postfix***<br><br>
-  Step 2: Configure Postfix.<br>
-      - During the configuration, choose "Internet Site" and proceed.
+  Step 2: Configure Postfix.
+      <br>- During the configuration, choose "Internet Site" and proceed.
         If needed, we can customize our mail settings. <br>
     The main configuration file for Postfix is usually located at /etc/postfix/main.cf. <br>
       - We can edit this file using a text editor like nano  <br>
