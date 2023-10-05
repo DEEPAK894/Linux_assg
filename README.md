@@ -82,7 +82,7 @@ esac
 
 echo "Uncompressed file: $uncompressed_file"
 ```
-
+ Step 2: Run the Script
 
 
 
