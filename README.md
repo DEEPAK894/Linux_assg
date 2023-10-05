@@ -103,7 +103,7 @@ Ans:-
        sudo service showtime status -> It should show status.<br>
     Ans:-<br>
        Step 1: Create the Shell Script hat will write the current time to a file in the user's home directory.
-               - Name the script as showtime.sh and write below content into the file:<br>
+               - Name the script as showtime.sh and write below content into the file:
 ```
  #!/bin/bash
  FILE_PATH="/home/sigmoid/showtime_output.txt"
@@ -114,7 +114,7 @@ Ans:-
 ```
 Step 2: Make the script executable<br>
            ***chmod +x showtime.sh*** <br>
-       Step 3: Create a systemd service file named showtime.service in the ***/etc/systemd/system/*** directory and write the below code into that file.<br>
+       Step 3: Create a systemd service file named showtime.service in the ***/etc/systemd/system/*** directory and write the below code into that file.
   ```  
      [Unit]
      Description=Showtime Service
