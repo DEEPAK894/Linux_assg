@@ -19,13 +19,13 @@ Ans:-<br>
 
     <br>    
 2)  Create a user in your localhost, which should not be able to execute the sudo command. <br>
-Ans:-
-      - To create a new user, use the following command <br>
-         ***sudo useradd newuser*** <br>
+Ans:
+     - To create a new user, use the following command <br><br>
+           ***sudo useradd newuser*** <br>
 By default, on most Unix-based systems, regular users are not in the sudo group, so they do not have sudo privileges.
 <br>
 
-3) Configure your system in such a way that when a user type and executes a describe command from anywhere of the system    it must list all the files and folders of the user's current directory. <br>
+4) Configure your system in such a way that when a user type and executes a describe command from anywhere of the system    it must list all the files and folders of the user's current directory. <br>
  Ans:-<br>
  Step 1: Create a Shell Script.<br>
       - Create a new file, describe.sh in the directory /usr/local/bin, and add the following lines to it:<br>
