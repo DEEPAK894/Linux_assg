@@ -40,7 +40,7 @@ Ans:-
  Step 2: Make the Script Executable:<br>
       - Make the script executable using the following command:<br>
          ***chmod a+x describe.sh***<br>
-Step 3: Test the Configuration by typing the describe in the termianl<br><br>
+Step 3: Test the Configuration by typing the describe in the terminal<br><br>
 
 4) Users can put a compressed file at any path of the linux file system. The name of the file will be research
    and the      extension will be of compression type, example for gzip type extension will be .gz.
