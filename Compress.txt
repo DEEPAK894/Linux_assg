@@ -2,26 +2,23 @@
    and the extension will be of compression type, example for gzip type extension will be .gz.
    You have to find the file and check the compression type and uncompress it.<br>
 Ans:-
-   Step 1: Create a New Shell Script with file name as uncompress_research.sh using nano command and add the below code into the file.
-
-```
- #!/bin/bash
- compressed_file=$(find / -type f -name "research.*" 2>/dev/null)
-
- if [ -z "$compressed_file" ]; then
-    echo "No compressed file named 'research' found."
-    exit 1
- fi
-
- file_extension="${compressed_file##*.}"
-
- case "$file_extension" in
-    "gz")
-        uncompressed_file="${compressed_file%.gz}"
-        gzip -d "$compressed_file"
-        echo "File '$compressed_file' has been uncompressed using gzip."
+     Step 1: Create a New Shell Script with file name as uncompress_research.sh using nano command and add the below 
+             code into the file.
+     ```
+     #!/bin/bash
+     compressed_file=$(find / -type f -name "research.*" 2>/dev/null)
+     if [ -z "$compressed_file" ]; then
+     echo "No compressed file named 'research' found."
+     exit 1
+     fi
+     file_extension="${compressed_file##*.}"
+     case "$file_extension" in
+     "gz")
+       uncompressed_file="${compressed_file%.gz}"
+       gzip -d "$compressed_file"
+       echo "File '$compressed_file' has been uncompressed using gzip."
         ;;
-    "zip")
+     "zip")
         uncompressed_file="${compressed_file%.zip}"
         unzip "$compressed_file" -d "$(dirname $compressed_file)"
         echo "File '$compressed_file' has been uncompressed using zip."
@@ -34,6 +31,8 @@ esac
 
  echo "Uncompressed file: $uncompressed_file"
  ```
-    Step 2: Run the Script<br>
-      ***./uncompress_research.sh***<br>
-       - The script will start searching for a compressed file named "research" with a specific extension (e.g., .gz or .zip) in our Linux filesystem. If it finds the file, it will uncompress it accordingly and provide you with the output.
+    Step 2: Run the Script
+             ***./uncompress_research.sh***
+       - The script will start searching for a compressed file named "research" with a specific extension 
+         (e.g., .gz or .zip) in our Linux filesystem. 
+       - If it finds the file, it will uncompress it accordingly and provide you with the output.
