@@ -86,15 +86,15 @@ echo "Uncompressed file: $uncompressed_file"
 ```
  <br>Step 2: Run the Script<br>
       ***./uncompress_research.sh***<br>
-       - The script will start searching for a compressed file named "research" with a specific extension (e.g., .gz or .zip) in your Linux filesystem. If it finds the file, it will uncompress it accordingly and provide you with the output.
-<br>
+       - The script will start searching for a compressed file named "research" with a specific extension (e.g., .gz or .zip) in our Linux filesystem. If it finds the file, it will uncompress it accordingly and provide you with the output.
+<br><br>
  5)  Configure your system in such a way that any user of your system creates a file then there should not be permission to do any activity in that file.<br>
 Ans:-
   Step 1: Use umask command for specific session<br>
         ***umask 0777***<br>
   Step 2: Apply umask to root<br>
         ***sudo nano bash.bashrc  or sudo nano /etc/login.defs*** <br>
-        - Scroll down and change umask 022 to 0777<br>
+        - Scroll down and change umask 022 to 0777<br><br>
 
  6) Create a service with the name showtime , after starting the service, every minute it should print the current time      in a file in the user home directory.<br>    
     Ex:-
