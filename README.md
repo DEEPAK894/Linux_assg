@@ -105,7 +105,7 @@ Ans:-
        Step 1: Create the Shell Script hat will write the current time to a file in the user's home directory.
                - Name the script as showtime.sh and write below content into the file:<br>
 ```
-  #!/bin/bash
+ #!/bin/bash
  FILE_PATH="/home/sigmoid/showtime_output.txt"
  while true; do
  echo $(date) >> "$FILE_PATH"
@@ -118,15 +118,15 @@ Step 2: Make the script executable<br>
                below code into that file.<br>
   ```  
      [Unit]
-       Description=Showtime Service
-      After=network.target
+     Description=Showtime Service
+     After=network.target
      [Service]
      ExecStart=/home/sigmoid/showtime.sh
      Restart=always
      User=sigmoid
-    Group=sigmoid
-    [Install]
-    WantedBy=multi-user.target
+     Group=sigmoid
+     [Install]
+     WantedBy=multi-user.target
   ```
   
   The script will start searching for a compressed file named "research" with a specific extension (e.g., .gz or .zip) in your Linux filesystem. If it finds the file, it will uncompress it accordingly and provide you with the output.
@@ -135,9 +135,9 @@ Step 4:  Reload Systemd:<br>
                 After making changes to the service unit file, you need to reload the systemd manager configuration.                    Run the following command to reload systemd:<br>
                  ***sudo systemctl daemon-reload***<br>
        Step 5: Manage the Service<br>
-               -Command to start the service : sudo systemctl start showtime<br>
-               -Command to stop the service  : sudo systemctl stop showtime<br>
-               -Command to check the service status : sudo systemctl status showtime<br>
+               - Command to start the service : ***sudo systemctl start showtime***<br>
+               - Command to stop the service  : ***sudo systemctl stop showtime***<br>
+               - Command to check the service status : ***sudo systemctl status showtime***<br>
              * To check the output of the showtime.sh script, which continuously appends the current time to a file (showtime_output.txt).<br>
              * If we want to continuously monitor the output file in real-time, you can use the tail command with the -f (follow) option: <br>
             ***tail -f ~/showtime_output.txt***
