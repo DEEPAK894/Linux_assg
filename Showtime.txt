@@ -5,7 +5,7 @@
        sudo service showtime stop   -> It should stop writing in file.
        sudo service showtime status -> It should show status.
     Ans:-
-          Step 1: Create the Shell Script hat will write the current time to a file in the user's home directory.
+          Step 1: Create the Shell Script that will write the current time to a file in the user's home directory.
                   - Name the script as showtime.sh and write below content into the file:
            ```
            #!/bin/bash
