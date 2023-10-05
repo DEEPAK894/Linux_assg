@@ -34,8 +34,8 @@ Ans:-
          #!/bin/bash
             ls -a
 ```
-  <br> 
-  - This script simply runs the ls -a command, which lists all files and folders in the current directory,
+<br>
+      - This script simply runs the ls -a command, which lists all files and folders in the current directory,
    including hidden files<br>
  Step 2: Make the Script Executable:<br>
       - Make the script executable using the following command:<br>
