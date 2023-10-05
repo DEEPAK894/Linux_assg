@@ -35,13 +35,13 @@
            (e.g.,.gz or.zip) in our Linux filesystem. 
            If it finds the file, it will uncompress it accordingly and provide with the output.
            Step 4:  Reload Systemd:
-                   After making changes to the service unit file, you need to reload the systemd manager configuration. 
-                   Run the following command to reload systemd:
+                 After making changes to the service unit file, you need to reload the systemd manager configuration. 
+                 Run the following command to reload systemd:
                        ***sudo systemctl daemon-reload***
            Step 5: Manage the Service:
                   - Command to start the service : ***sudo systemctl start showtime***
                   - Command to stop the service  : ***sudo systemctl stop showtime***
                   - Command to check the service status : ***sudo systemctl status showtime***
              * To check the output of the showtime.sh script, which continuously appends the current time to a file                     (showtime_output.txt).
-             * If we want to continuously monitor the output file in real-time, you can use the tail command with the 
-               -f (follow) option: ***tail -f ~/showtime_output.txt***      
+             * If we want to continuously monitor the output file in real-time, you can use the tail command with 
+               the -f (follow) option: ***tail -f ~/showtime_output.txt***      
