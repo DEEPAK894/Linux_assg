@@ -1,6 +1,6 @@
 # Linux_assignment
 
-1)  Configure smtp in localhost.
+1)  Configure smtp in localhost.<br>
 Ans:-
  Step 1: Install Postfix  on our Linux machine using the following command:
           command = { sudo apt install postfix }
@@ -17,13 +17,13 @@ Ans:-
       - We can now test our Postfix configuration by sending a test email using the following command.
         command = { echo "This is the body of the email" | mail -s "Subject Line" email@mydomain.com }
 
-        
-2)  Create a user in your localhost, which should not be able to execute the sudo command.
+    <br>    
+2)  Create a user in your localhost, which should not be able to execute the sudo command. <br>
 Ans:-
       - To create a new user, use the following command
-         command = { sudo useradd newuser }
+         command = { sudo useradd newuser } <br>
 By default, on most Unix-based systems, regular users are not in the sudo group, so they do not have sudo privileges.
-
+<br>
 
 3) Configure your system in such a way that when a user type and executes a describe command from anywhere of the system    it must list all the files and folders of the user's current directory.
 Ans:-
