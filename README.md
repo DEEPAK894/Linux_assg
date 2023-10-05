@@ -118,13 +118,13 @@ Step 2: Make the script executable<br>
      [Unit]
        Description=Showtime Service
       After=network.target
-         [Service]
-                  ExecStart=/home/sigmoid/showtime.sh
-                  Restart=always
-                  User=sigmoid
-                  Group=sigmoid
-                  [Install]
-                  WantedBy=multi-user.target
+     [Service]
+     ExecStart=/home/sigmoid/showtime.sh
+     Restart=always
+     User=sigmoid
+    Group=sigmoid
+    [Install]
+    WantedBy=multi-user.target
   ```
   
   The script will start searching for a compressed file named "research" with a specific extension (e.g., .gz or .zip) in your Linux filesystem. If it finds the file, it will uncompress it accordingly and provide you with the output.
