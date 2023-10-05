@@ -102,27 +102,34 @@ Ans:-
     Ans:-<br>
        Step 1: Create the Shell Script hat will write the current time to a file in the user's home directory.
                - Name the script as showtime.sh and write below content into the file:<br>
-            ```   #!/bin/bash
-               FILE_PATH="/home/sigmoid/showtime_output.txt"
-               while true; do
-               echo $(date) >> "$FILE_PATH"
-               sleep 60  
-               done ```<br>
-       Step 2: Make the script executable<br>
+```
+  #!/bin/bash
+ FILE_PATH="/home/sigmoid/showtime_output.txt"
+ while true; do
+ echo $(date) >> "$FILE_PATH"
+ sleep 60  
+ done
+```
+Step 2: Make the script executable<br>
             command = { chmod +x showtime.sh }<br>
        Step 3: Create a systemd service file named showtime.service in the /etc/systemd/system/ directory and write the
                below code into that file.<br>
-                ```  [Unit]
-                  Description=Showtime Service
-                  After=network.target
-                  [Service]
+  ```  
+     [Unit]
+       Description=Showtime Service
+      After=network.target
+         [Service]
                   ExecStart=/home/sigmoid/showtime.sh
                   Restart=always
                   User=sigmoid
                   Group=sigmoid
                   [Install]
-                  WantedBy=multi-user.target ```<br>
-       Step 4:  Reload Systemd:<br>
+                  WantedBy=multi-user.target
+  ```
+  
+  The script will start searching for a compressed file named "research" with a specific extension (e.g., .gz or .zip) in your Linux filesystem. If it finds the file, it will uncompress it accordingly and provide you with the output.
+
+Step 4:  Reload Systemd:<br>
                 After making changes to the service unit file, you need to reload the systemd manager configuration.                    Run the following command to reload systemd:<br>
                   command = { sudo systemctl daemon-reload }<br>
        Step 5: Manage the Service<br>
