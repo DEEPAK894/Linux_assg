@@ -85,8 +85,8 @@ esac
 echo "Uncompressed file: $uncompressed_file"
 ```
  <br>Step 2: Run the Script<br>
-       - Execute the script by typing: ./uncompress_research.sh<br>
-       -The script will start searching for a compressed file named "research" with a specific extension (e.g., .gz or .zip) in your Linux filesystem. If it finds the file, it will uncompress it accordingly and provide you with the output.
+      ***./uncompress_research.sh***<br>
+       - The script will start searching for a compressed file named "research" with a specific extension (e.g., .gz or .zip) in your Linux filesystem. If it finds the file, it will uncompress it accordingly and provide you with the output.
 <br>
  5)  Configure your system in such a way that any user of your system creates a file then there should not be permission to do any activity in that file.<br>
 Ans:-
