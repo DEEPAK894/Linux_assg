@@ -2,7 +2,7 @@
 
 1)  Configure smtp in localhost.<br>
 Ans:-<br>
- Step 1: Install Postfix  on our Linux machine using the following command:
+ Step 1: Install Postfix  on our Linux machine using the following command:<br>
         ***sudo apt install postfix ***<br>
  Step 2: Configure Postfix.<br>
       - During the configuration, choose "Internet Site" and proceed.
