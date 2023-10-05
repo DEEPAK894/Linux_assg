@@ -114,8 +114,7 @@ Ans:-
 ```
 Step 2: Make the script executable<br>
            ***chmod +x showtime.sh*** <br>
-       Step 3: Create a systemd service file named showtime.service in the /etc/systemd/system/ directory and write the
-               below code into that file.<br>
+       Step 3: Create a systemd service file named showtime.service in the ***/etc/systemd/system/*** directory and write the below code into that file.<br>
   ```  
      [Unit]
      Description=Showtime Service
