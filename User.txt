@@ -2,5 +2,4 @@
 Ans:-
      - To create a new user, use the following command
            ***sudo useradd newuser*** 
-
-     - By default, on most Unix-based systems, regular users are not in the sudo group, so they do not have sudo privileges.
+     - By default, on most Unix-based systems, regular users are not in the sudo group, so they don't have sudo privileges.
