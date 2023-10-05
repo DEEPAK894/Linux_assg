@@ -102,7 +102,7 @@ Ans:-
        sudo service showtime stop   -> It should stop writing in file.
        sudo service showtime status -> It should show status.<br>
     Ans:-<br>
-       Step 1: Create the Shell Script hat will write the current time to a file in the user's home directory.
+Step 1: Create the Shell Script hat will write the current time to a file in the user's home directory.
                - Name the script as showtime.sh and write below content into the file:
 ```
  #!/bin/bash
@@ -114,7 +114,7 @@ Ans:-
 ```
 Step 2: Make the script executable<br>
            ***chmod +x showtime.sh*** <br>
-       Step 3: Create a systemd service file named showtime.service in the ***/etc/systemd/system/*** directory and write the below code into that file.
+ Step 3: Create a systemd service file named showtime.service in the ***/etc/systemd/system/*** directory and write the below code into that file.
   ```  
      [Unit]
      Description=Showtime Service
@@ -133,7 +133,7 @@ Step 2: Make the script executable<br>
 Step 4:  Reload Systemd:<br>
                 After making changes to the service unit file, you need to reload the systemd manager configuration.                    Run the following command to reload systemd:<br>
                  ***sudo systemctl daemon-reload***<br>
-       Step 5: Manage the Service<br>
+ Step 5: Manage the Service<br>
                - Command to start the service : ***sudo systemctl start showtime***<br>
                - Command to stop the service  : ***sudo systemctl stop showtime***<br>
                - Command to check the service status : ***sudo systemctl status showtime***<br>
