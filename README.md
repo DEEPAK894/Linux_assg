@@ -25,7 +25,7 @@ Ans:-
 By default, on most Unix-based systems, regular users are not in the sudo group, so they do not have sudo privileges.
 <br>
 
-4) Configure your system in such a way that when a user type and executes a describe command from anywhere of the system    it must list all the files and folders of the user's current directory. <br>
+3) Configure your system in such a way that when a user type and executes a describe command from anywhere of the system    it must list all the files and folders of the user's current directory. <br>
  Ans:-<br>
  Step 1: Create a Shell Script.<br>
       - Create a new file, describe.sh in the directory /usr/local/bin, and add the following lines to it:<br>
@@ -33,7 +33,7 @@ By default, on most Unix-based systems, regular users are not in the sudo group,
          #!/bin/bash
             ls -a
 ```
-   This script simply runs the ls -a command, which lists all files and folders in the current directory,
+   - This script simply runs the ls -a command, which lists all files and folders in the current directory,
    including hidden files<br>
  Step 2: Make the Script Executable:<br>
       - Make the script executable using the following command:<br>
