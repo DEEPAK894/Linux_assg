@@ -14,7 +14,7 @@ Ans:-<br>
   Step 3: Install mailutils.<br>
            ***sudo apt install mailutils***   <br>   
   Step 4: Test the Configuration.<br>
-      - We can now test our Postfix configuration by sending a test email using the following command.
+      - We can now test our Postfix configuration by sending a test email using the following command.<br>
         ***echo "This is the body of the email" | mail -s "Subject Line" email@mydomain.com*** 
 
     <br>    
@@ -37,7 +37,7 @@ By default, on most Unix-based systems, regular users are not in the sudo group,
    including hidden files<br>
  Step 2: Make the Script Executable:<br>
       - Make the script executable using the following command:<br>
-         command = { chmod a+x describe.sh }<br>
+         ***chmod a+x describe.sh***<br>
  Step 3: Test the Configuration by typing the describe in the termianl<br>
 
 4) Users can put a compressed file at any path of the linux file system. The name of the file will be research
@@ -86,12 +86,12 @@ echo "Uncompressed file: $uncompressed_file"
        - Execute the script by typing: ./uncompress_research.sh<br>
        -The script will start searching for a compressed file named "research" with a specific extension (e.g., .gz or .zip) in your Linux filesystem. If it finds the file, it will uncompress it accordingly and provide you with the output.
 <br>
- 5)  Configure your system in such a way that any user of your system creates a file then there should not be permission      to do any activity in that file.<br>
+ 5)  Configure your system in such a way that any user of your system creates a file then there should not be permission to do any activity in that file.<br>
 Ans:-
   Step 1: Use umask command for specific session<br>
-         command { umask 0777 }<br>
+        ***umask 0777***<br>
   Step 2: Apply umask to root<br>
-         command { sudo nano bash.bashrc  or sudo nano /etc/login.defs}<br>
+        ***sudo nano bash.bashrc  or sudo nano /etc/login.defs*** <br>
         - Scroll down and change umask 022 to 0777<br>
 
  6) Create a service with the name showtime , after starting the service, every minute it should print the current time      in a file in the user home directory.<br>    
@@ -111,7 +111,7 @@ Ans:-
  done
 ```
 Step 2: Make the script executable<br>
-            command = { chmod +x showtime.sh }<br>
+           ***chmod +x showtime.sh*** <br>
        Step 3: Create a systemd service file named showtime.service in the /etc/systemd/system/ directory and write the
                below code into that file.<br>
   ```  
@@ -131,10 +131,11 @@ Step 2: Make the script executable<br>
 
 Step 4:  Reload Systemd:<br>
                 After making changes to the service unit file, you need to reload the systemd manager configuration.                    Run the following command to reload systemd:<br>
-                  command = { sudo systemctl daemon-reload }<br>
+                 ***sudo systemctl daemon-reload***<br>
        Step 5: Manage the Service<br>
                -Command to start the service : sudo systemctl start showtime<br>
                -Command to stop the service  : sudo systemctl stop showtime<br>
                -Command to check the service status : sudo systemctl status showtime<br>
-          * To check the output of the showtime.sh script, which continuously appends the current time to a file (showtime_output.txt).<br>
-          * If we want to continuously monitor the output file in real-time, you can use the tail command with the -f (follow) option: command = { tail -f ~/showtime_output.txt }<br>
+             * To check the output of the showtime.sh script, which continuously appends the current time to a file (showtime_output.txt).<br>
+             * If we want to continuously monitor the output file in real-time, you can use the tail command with the -f (follow) option: <br>
+            ***tail -f ~/showtime_output.txt***
