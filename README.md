@@ -20,8 +20,8 @@ Ans:-<br>
     <br>    
 2)  Create a user in your localhost, which should not be able to execute the sudo command. <br>
 Ans:
-     - To create a new user, use the following command <br><br>
-           ***sudo useradd newuser*** <br>
+     - To create a new user, use the following command 
+           ***sudo useradd newuser*** <br><br>
 By default, on most Unix-based systems, regular users are not in the sudo group, so they do not have sudo privileges.
 <br>
 
