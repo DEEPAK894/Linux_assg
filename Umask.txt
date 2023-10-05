@@ -1,5 +1,5 @@
-5. Configure your system in such a way that any user of your system creates a file then there should not be permission 
-   to do any activity in that file.
+5. Configure your system in such a way that any user of your system creates a file then there should not be 
+   permission to do any activity in that file.
 Ans:-
   Step 1: Use umask command for specific session      
         ***umask 0777***
