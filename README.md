@@ -3,14 +3,14 @@
 ### 1)  Configure smtp in localhost.<br>
 Ans:-<br>
 Step 1: Install Postfix  on our Linux machine using the following command:<br>
-               ***sudo apt install postfix***<br>
+              > ***sudo apt install postfix***<br>
               
   Step 2: Configure Postfix.<br>
         1. During the configuration, choose "Internet Site" and proceed.<br>
         2. If needed, we can customize our mail settings. <br>
         3. The main configuration file for Postfix is usually located at /etc/postfix/main.cf. <br>
         4. We can edit this file using a text editor like nano  <br>
-           ***sudo nano /etc/postfix/main.cf*** <br>
+           >***sudo nano /etc/postfix/main.cf*** <br>
         In the file, modify the line  inet_interfaces = all to inet_interfaces = loopback-only <br>
         
   Step 3: Install mailutils.<br>
