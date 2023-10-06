@@ -37,7 +37,7 @@
    -  This script simply runs the ls -a command, which lists all files and folders in the current directory,
        including hidden files.<br><br>
  **Step 2:** Make the Script Executable.<br><br>
- **Step 3:** Test the Configuration by typing the describe in the terminal.<br><br>
+ **Step 3:** Test the Configuration by typing the ***describe*** in the terminal.<br><br>
 
 ### 4) Users can put a compressed file at any path of the linux file system. The name of the file will be research and the extension will be of compression type, example for gzip type extension will be .gz. You have to find the file and check the compression type and uncompress it.<br>
 **Ans:-** <br>
