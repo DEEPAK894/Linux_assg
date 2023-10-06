@@ -41,7 +41,7 @@
 
 ### 4) Users can put a compressed file at any path of the linux file system. The name of the file will be research and the extension will be of compression type, example for gzip type extension will be .gz. You have to find the file and check the compression type and uncompress it.<br>
 **Ans:-** <br>
-   **Step 1:** Create a New Shell Script with file name as uncompress_research.sh using nano command and add the below code into the file.
+   **Step 1:** Create a New Shell Script with file name as *uncompress_research.sh* using nano command and add the below code into the file.
  ``` ble.sh 
  #!/bin/bash
 
@@ -81,7 +81,7 @@ echo "Uncompressed file: $uncompressed_file"
 ```
  **Step 2:** Run the Script.<br>
  >     ./uncompress_research.sh
-+  The script will start searching for a compressed file named "research" with a specific extension (e.g., .gz or .zip) in our Linux filesystem. If it finds the file, it will uncompress it accordingly and provide you with the output.<br><br>
++  The script will start searching for a compressed file named "*research*" with a specific extension (e.g., .gz or .zip) in our Linux filesystem. If it finds the file, it will uncompress it accordingly and provide you with the output.<br><br>
 ### 5) Configure your system in such a way that any user of your system creates a file then there should not be permission to do any activity in that file.<br>
 **Ans:-**  <br>
  **Step 1:** Use umask command for specific session.<br>
