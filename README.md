@@ -39,7 +39,7 @@ Ans:- <br>
    including hidden files<br>
  Step 2: Make the Script Executable:<br>
       - Make the script executable using the following command:<br>
-         ***chmod a+x describe.sh***<br>
+ >        ***chmod a+x describe.sh***<br>
 Step 3: Test the Configuration by typing the describe in the terminal<br><br>
 
 ### 4) Users can put a compressed file at any path of the linux file system. The name of the file will be research and the extension will be of compression type, example for gzip type extension will be .gz. You have to find the file and check the compression type and uncompress it.<br>
@@ -83,15 +83,15 @@ esac
 echo "Uncompressed file: $uncompressed_file"
 ```
  <br>Step 2: Run the Script<br>
-      ***./uncompress_research.sh***<br>
-       - The script will start searching for a compressed file named "research" with a specific extension (e.g., .gz or .zip) in our Linux filesystem. If it finds the file, it will uncompress it accordingly and provide you with the output.<br><br>
+ >     ***./uncompress_research.sh***<br>
+  - The script will start searching for a compressed file named "research" with a specific extension (e.g., .gz or .zip) in our Linux filesystem. If it finds the file, it will uncompress it accordingly and provide you with the output.<br><br>
 ### 5) Configure your system in such a way that any user of your system creates a file then there should not be permission to do any activity in that file.<br>
 Ans:-
   Step 1: Use umask command for specific session<br>
-        ***umask 0777***<br>
+  >     ***umask 0777***<br>
   Step 2: Apply umask to root<br>
-        ***sudo nano bash.bashrc  or sudo nano /etc/login.defs*** <br>
-        - Scroll down and change umask 022 to 0777<br><br>
+  >     ***sudo nano bash.bashrc  or sudo nano /etc/login.defs*** <br>
+   - Scroll down and change umask 022 to 0777<br><br>
 
 ### 6) Create a service with the name showtime , after starting the service, every minute it should print the current time in a file in the user home directory.<br>                                                                                Ex:-sudo service showtime start -> It should start writing in file.<br>                                                     sudo service showtime stop -> It should stop writing in file. <br>                                                      sudo service showtime status -> It should show status.<br>
  Ans:-<br>
@@ -106,7 +106,7 @@ Step 1: Create the Shell Script hat will write the current time to a file in the
       done
 ```
 Step 2: Make the script executable<br>
-           ***chmod +x showtime.sh*** <br>
+  >     ***chmod +x showtime.sh*** <br>
  Step 3: Create a systemd service file named showtime.service in the ***/etc/systemd/system/*** directory and write the below code into that file.
   ``` ble.sh  
      [Unit]
@@ -125,11 +125,11 @@ Step 2: Make the script executable<br>
 
 Step 4:  Reload Systemd:<br>
                 After making changes to the service unit file, you need to reload the systemd manager configuration.                    Run the following command to reload systemd:<br>
-                 ***sudo systemctl daemon-reload***<br>
+>                    ***sudo systemctl daemon-reload***<br>
  Step 5: Manage the Service<br>
                - Command to start the service : ***sudo systemctl start showtime***<br>
                - Command to stop the service  : ***sudo systemctl stop showtime***<br>
                - Command to check the service status : ***sudo systemctl status showtime***<br>
              * To check the output of the showtime.sh script, which continuously appends the current time to a file (showtime_output.txt).<br>
              * If we want to continuously monitor the output file in real-time, you can use the tail command with the -f (follow) option: <br>
-            ***tail -f ~/showtime_output.txt***
+ >           ***tail -f ~/showtime_output.txt***
