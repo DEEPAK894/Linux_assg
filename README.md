@@ -21,9 +21,9 @@ Step 1: Install Postfix  on our Linux machine using the following command:<br>
   
 ### 2)  Create a user in your localhost, which should not be able to execute the sudo command. <br>
 Ans:-
-     - To create a new user, use the following command<br>
-           > ***sudo useradd newuser*** <br><br>
-     - By default, on most Unix-based systems, regular users are not in the sudo group, so they do not have sudo privileges.
+     - To create a new user, use the following command <br>
+>     ***sudo useradd newuser*** <br><br>
+  - By default, on most Unix-based systems, regular users are not in the sudo group, so they do not have sudo privileges.
 <br>
 
 ### 3) Configure your system in such a way that when a user type and executes a describe command from anywhere of the system    it must list all the files and folders of the user's current directory. <br>
