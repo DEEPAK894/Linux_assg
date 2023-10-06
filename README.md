@@ -97,13 +97,13 @@ Ans:-
  Ans:-<br>
 Step 1: Create the Shell Script hat will write the current time to a file in the user's home directory.
                - Name the script as showtime.sh and write below content into the file:
-``` ble.sh 
- #!/bin/bash
- FILE_PATH="/home/sigmoid/showtime_output.txt"
- while true; do
- echo $(date) >> "$FILE_PATH"
- sleep 60  
- done
+```  ble.sh 
+      #!/bin/bash
+      FILE_PATH="/home/sigmoid/showtime_output.txt"
+      while true; do
+      echo $(date) >> "$FILE_PATH"
+      sleep 60  
+      done
 ```
 Step 2: Make the script executable<br>
            ***chmod +x showtime.sh*** <br>
