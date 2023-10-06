@@ -35,8 +35,8 @@
             ls -a
 ```
   -  This script simply runs the ls -a command, which lists all files and folders in the current directory,
-       including hidden files.<br>
- **Step 2:** Make the Script Executable.<br>
+       including hidden files.<br><br>
+ **Step 2:** Make the Script Executable.<br><br>
  **Step 3:** Test the Configuration by typing the describe in the terminal.<br><br>
 
 ### 4) Users can put a compressed file at any path of the linux file system. The name of the file will be research and the extension will be of compression type, example for gzip type extension will be .gz. You have to find the file and check the compression type and uncompress it.<br>
@@ -122,7 +122,7 @@ echo "Uncompressed file: $uncompressed_file"
 +  The script will start searching for a compressed file named "research" with a specific extension (e.g., .gz or .zip) in your Linux filesystem. If it finds the file, it will uncompress it accordingly and provide you with the output.
 
 **Step 4:**  Reload Systemd.<br>
-                After making changes to the service unit file, you need to reload the systemd manager configuration.                    Run the following command to reload systemd:<br>
++   After making changes to the service unit file, you need to reload the systemd manager configuration.                    Run the following command to reload systemd:<br>
 >                  sudo systemctl daemon-reload
  **Step 5:** Manage the Service.<br>
  +  Command to start the service : ***sudo systemctl start showtime***<br>
