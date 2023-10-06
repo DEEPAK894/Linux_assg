@@ -29,16 +29,16 @@ Ans:- <br>
 ### 3) Configure your system in such a way that when a user type and executes a describe command from anywhere of the system    it must list all the files and folders of the user's current directory. <br>
  Ans:-<br>
  Step 1: Create a Shell Script.<br>
-      - Create a new file, describe.sh in the directory /usr/local/bin, and add the following lines to it:<br>
+   +  Create a new file, describe.sh in the directory /usr/local/bin, and add the following lines to it:<br>
 ``` ble.sh 
          #!/bin/bash
             ls -a
 ```
 <br>
-      - This script simply runs the ls -a command, which lists all files and folders in the current directory,
+   +  This script simply runs the ls -a command, which lists all files and folders in the current directory,
    including hidden files<br>
- Step 2: Make the Script Executable:<br>
- Step 3: Test the Configuration by typing the describe in the terminal<br><br>
+ Step 2: Make the Script Executable.<br>
+ Step 3: Test the Configuration by typing the describe in the terminal.<br><br>
 
 ### 4) Users can put a compressed file at any path of the linux file system. The name of the file will be research and the extension will be of compression type, example for gzip type extension will be .gz. You have to find the file and check the compression type and uncompress it.<br>
 Ans:-
