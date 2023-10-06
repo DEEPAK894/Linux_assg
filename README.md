@@ -1,6 +1,6 @@
 # Linux_assignment
 
-## 1)  Configure smtp in localhost.<br>
+### 1)  Configure smtp in localhost.<br>
 Ans:-<br>
 Step 1: Install Postfix  on our Linux machine using the following command:<br>
                ***sudo apt install postfix***<br>
@@ -19,14 +19,14 @@ Step 1: Install Postfix  on our Linux machine using the following command:<br>
         We can now test our Postfix configuration by sending a test email using the following command.<br>
         ***echo "This is the body of the email" | mail -s "Subject Line" email@mydomain.com*** <br>
   
-2)  Create a user in your localhost, which should not be able to execute the sudo command. <br>
+### 2)  Create a user in your localhost, which should not be able to execute the sudo command. <br>
 Ans:-
      - To create a new user, use the following command<br>
            ***sudo useradd newuser*** <br><br>
      - By default, on most Unix-based systems, regular users are not in the sudo group, so they do not have sudo privileges.
 <br>
 
-3) Configure your system in such a way that when a user type and executes a describe command from anywhere of the system    it must list all the files and folders of the user's current directory. <br>
+### 3) Configure your system in such a way that when a user type and executes a describe command from anywhere of the system    it must list all the files and folders of the user's current directory. <br>
  Ans:-<br>
  Step 1: Create a Shell Script.<br>
       - Create a new file, describe.sh in the directory /usr/local/bin, and add the following lines to it:<br>
@@ -42,7 +42,7 @@ Ans:-
          ***chmod a+x describe.sh***<br>
 Step 3: Test the Configuration by typing the describe in the terminal<br><br>
 
-4) Users can put a compressed file at any path of the linux file system. The name of the file will be research
+### 4) Users can put a compressed file at any path of the linux file system. The name of the file will be research
    and the      extension will be of compression type, example for gzip type extension will be .gz.
    You have to find the file and check the compression type and uncompress it.<br>
 Ans:-
@@ -87,7 +87,7 @@ echo "Uncompressed file: $uncompressed_file"
  <br>Step 2: Run the Script<br>
       ***./uncompress_research.sh***<br>
        - The script will start searching for a compressed file named "research" with a specific extension (e.g., .gz or .zip) in our Linux filesystem. If it finds the file, it will uncompress it accordingly and provide you with the output.<br><br>
- 5) Configure your system in such a way that any user of your system creates a file then there should not be permission to do any activity in that file.<br>
+### 5) Configure your system in such a way that any user of your system creates a file then there should not be permission to do any activity in that file.<br>
 Ans:-
   Step 1: Use umask command for specific session<br>
         ***umask 0777***<br>
@@ -95,7 +95,7 @@ Ans:-
         ***sudo nano bash.bashrc  or sudo nano /etc/login.defs*** <br>
         - Scroll down and change umask 022 to 0777<br><br>
 
- 6) Create a service with the name showtime , after starting the service, every minute it should print the current time      in a file in the user home directory.  
+### 6) Create a service with the name showtime , after starting the service, every minute it should print the current time      in a file in the user home directory.  
     Ex:-
        sudo service showtime start   -> It should start writing in file.
        sudo service showtime stop   -> It should stop writing in file.
