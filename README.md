@@ -8,7 +8,7 @@
   **Step 2:** Configure Postfix.<br>
   +  During the configuration, choose "Internet Site" and proceed.<br>
   +  If needed, we can customize our mail settings. <br>
-  +  The main configuration file for Postfix is usually located at /etc/postfix/main.cf. <br>
+  +  The main configuration file for Postfix is usually located at **/etc/postfix/main.cf**. <br>
   +  We can edit this file using a text editor like nano  <br>
  >         sudo nano /etc/postfix/main.cf
   +  In the file, modify the line  inet_interfaces = all to inet_interfaces = loopback-only <br>
@@ -29,7 +29,7 @@
 ### 3) Configure your system in such a way that when a user type and executes a describe command from anywhere of the system    it must list all the files and folders of the user's current directory. <br>
  **Ans:-** <br>
  **Step 1:** Create a Shell Script.<br>
-   +  Create a new file, describe.sh in the directory /usr/local/bin, and add the following lines to it.<br>
+   +  Create a new file, describe.sh in the directory **/usr/local/bin**, and add the following lines to it.<br>
 ``` ble.sh 
          #!/bin/bash
             ls -a
