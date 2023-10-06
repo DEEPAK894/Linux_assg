@@ -13,9 +13,9 @@
  >         sudo nano /etc/postfix/main.cf
   +  In the file, modify the line  inet_interfaces = all to inet_interfaces = loopback-only <br>
         
-  **Step 3:** Install mailutils.<br>
+**Step 3:** Install mailutils.<br>
   >         sudo apt install mailutils 
-  **Step 4:** Test the Configuration.<br>
+**Step 4:** Test the Configuration.<br>
   +   We can now test our Postfix configuration by sending a test email using the following command.<br>
    >     echo "This is the body of the email" | mail -s "Subject Line" email@mydomain.com
   
