@@ -1,11 +1,11 @@
 # Linux_assignment
 
 ### 1)  Configure smtp in localhost.<br>
-Ans:-<br>
-Step 1: Install Postfix  on our Linux machine using the following command.<br> 
+**Ans:-** <br>
+**Step 1:** Install Postfix  on our Linux machine using the following command.<br> 
 >                sudo apt install postfix
               
-  Step 2: Configure Postfix.<br>
+  **Step 2:** Configure Postfix.<br>
   +  During the configuration, choose "Internet Site" and proceed.<br>
   +  If needed, we can customize our mail settings. <br>
   +  The main configuration file for Postfix is usually located at /etc/postfix/main.cf. <br>
@@ -13,22 +13,22 @@ Step 1: Install Postfix  on our Linux machine using the following command.<br>
  >         sudo nano /etc/postfix/main.cf
   +  In the file, modify the line  inet_interfaces = all to inet_interfaces = loopback-only <br>
         
-  Step 3: Install mailutils.<br>
+  **Step 3:** Install mailutils.<br>
   >         sudo apt install mailutils 
-  Step 4: Test the Configuration.<br>
+  **Step 4:** Test the Configuration.<br>
   +   We can now test our Postfix configuration by sending a test email using the following command.<br>
    >     echo "This is the body of the email" | mail -s "Subject Line" email@mydomain.com
   
 ### 2)  Create a user in your localhost, which should not be able to execute the sudo command. <br>
-Ans:- <br>
+**Ans:-** <br>
   - To create a new user, use the following command <br>
 >     sudo useradd newuser
   - By default, on most Unix-based systems, regular users are not in the sudo group, so they do not have sudo privileges.
 <br>
 
 ### 3) Configure your system in such a way that when a user type and executes a describe command from anywhere of the system    it must list all the files and folders of the user's current directory. <br>
- Ans:-<br>
- Step 1: Create a Shell Script.<br>
+ **Ans:-** <br>
+ **Step 1:** Create a Shell Script.<br>
    +  Create a new file, describe.sh in the directory /usr/local/bin, and add the following lines to it.<br>
 ``` ble.sh 
          #!/bin/bash
@@ -36,12 +36,12 @@ Ans:- <br>
 ```
   -  This script simply runs the ls -a command, which lists all files and folders in the current directory,
        including hidden files.<br>
- Step 2: Make the Script Executable.<br>
- Step 3: Test the Configuration by typing the describe in the terminal.<br><br>
+ **Step 2:** Make the Script Executable.<br>
+ **Step 3:** Test the Configuration by typing the describe in the terminal.<br><br>
 
 ### 4) Users can put a compressed file at any path of the linux file system. The name of the file will be research and the extension will be of compression type, example for gzip type extension will be .gz. You have to find the file and check the compression type and uncompress it.<br>
-Ans:-
-   Step 1: Create a New Shell Script with file name as uncompress_research.sh using nano command and add the below code into the file.
+**Ans:-** <br>
+   **Step 1:** Create a New Shell Script with file name as uncompress_research.sh using nano command and add the below code into the file.
  ``` ble.sh 
  #!/bin/bash
 
@@ -79,21 +79,21 @@ esac
 
 echo "Uncompressed file: $uncompressed_file"
 ```
- <br>Step 2: Run the Script<br>
+ **Step 2:** Run the Script<br>
  >     ./uncompress_research.sh
-  - The script will start searching for a compressed file named "research" with a specific extension (e.g., .gz or .zip) in our Linux filesystem. If it finds the file, it will uncompress it accordingly and provide you with the output.<br><br>
++  The script will start searching for a compressed file named "research" with a specific extension (e.g., .gz or .zip) in our Linux filesystem. If it finds the file, it will uncompress it accordingly and provide you with the output.<br><br>
 ### 5) Configure your system in such a way that any user of your system creates a file then there should not be permission to do any activity in that file.<br>
-Ans:-
-  Step 1: Use umask command for specific session<br>
+**Ans:-**  <br>
+ **Step 1:** Use umask command for specific session<br>
   >       umask 0777
-  Step 2: Apply umask to root<br>
+  **Step 2:** Apply umask to root<br>
   >     sudo nano bash.bashrc  or sudo nano /etc/login.defs
    - Scroll down and change umask 022 to 0777<br><br>
 
 ### 6) Create a service with the name showtime , after starting the service, every minute it should print the current time in a file in the user home directory.<br>                                                                                Ex:-sudo service showtime start -> It should start writing in file.<br>                                                     sudo service showtime stop -> It should stop writing in file. <br>                                                      sudo service showtime status -> It should show status.<br>
- Ans:-<br>
-Step 1: Create the Shell Script hat will write the current time to a file in the user's home directory.
-               - Name the script as showtime.sh and write below content into the file:
+ **Ans:-** <br>
+**Step 1:** Create the Shell Script hat will write the current time to a file in the user's home directory.
+-  Name the script as showtime.sh and write below content into the file:
 ```  ble.sh 
       #!/bin/bash
       FILE_PATH="/home/sigmoid/showtime_output.txt"
@@ -102,9 +102,9 @@ Step 1: Create the Shell Script hat will write the current time to a file in the
       sleep 60  
       done
 ```
-Step 2: Make the script executable.<br>
+**Step 2**: Make the script executable.<br>
   >     chmod +x showtime.sh
- Step 3: Create a systemd service file named showtime.service in the ***/etc/systemd/system/*** directory and write the below code into that file.
+ **Step 3:** Create a systemd service file named showtime.service in the ***/etc/systemd/system/*** directory and write the below code into that file.
   ``` ini  
      [Unit]
      Description=Showtime Service
@@ -117,16 +117,17 @@ Step 2: Make the script executable.<br>
      [Install]
      WantedBy=multi-user.target
   ```
-  
-  The script will start searching for a compressed file named "research" with a specific extension (e.g., .gz or .zip) in your Linux filesystem. If it finds the file, it will uncompress it accordingly and provide you with the output.
 
-Step 4:  Reload Systemd:<br>
+
++  The script will start searching for a compressed file named "research" with a specific extension (e.g., .gz or .zip) in your Linux filesystem. If it finds the file, it will uncompress it accordingly and provide you with the output.
+
+**Step 4:**  Reload Systemd.<br>
                 After making changes to the service unit file, you need to reload the systemd manager configuration.                    Run the following command to reload systemd:<br>
 >                  sudo systemctl daemon-reload
- Step 5: Manage the Service<br>
-               - Command to start the service : ***sudo systemctl start showtime***<br>
-               - Command to stop the service  : ***sudo systemctl stop showtime***<br>
-               - Command to check the service status : ***sudo systemctl status showtime***<br>
-             * To check the output of the showtime.sh script, which continuously appends the current time to a file (showtime_output.txt).<br>
-             * If we want to continuously monitor the output file in real-time, you can use the tail command with the -f (follow) option: <br>
+ **Step 5:** Manage the Service.<br>
+ +  Command to start the service : ***sudo systemctl start showtime***<br>
+ + Command to stop the service  : ***sudo systemctl stop showtime***<br>
+ + Command to check the service status : ***sudo systemctl status showtime***<br>
+ 1. To check the output of the showtime.sh script, which continuously appends the current time to a file (showtime_output.txt).<br>
+ 2.  If we want to continuously monitor the output file in real-time, you can use the tail command with the -f (follow) option: <br>
  >          tail -f ~/showtime_output.txt
