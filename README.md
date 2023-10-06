@@ -30,7 +30,7 @@ Ans:- <br>
  Ans:-<br>
  Step 1: Create a Shell Script.<br>
       - Create a new file, describe.sh in the directory /usr/local/bin, and add the following lines to it:<br>
-``` sh
+``` ble.sh 
          #!/bin/bash
             ls -a
 ```
