@@ -20,9 +20,9 @@ Step 1: Install Postfix  on our Linux machine using the following command:<br>
    >     ***echo "This is the body of the email" | mail -s "Subject Line" email@mydomain.com***
   
 ### 2)  Create a user in your localhost, which should not be able to execute the sudo command. <br>
-Ans:-
-     - To create a new user, use the following command <br>
->     ***sudo useradd newuser*** <br><br>
+Ans:- <br>
+  - To create a new user, use the following command <br>
+>     ***sudo useradd newuser*** 
   - By default, on most Unix-based systems, regular users are not in the sudo group, so they do not have sudo privileges.
 <br>
 
