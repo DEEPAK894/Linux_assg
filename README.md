@@ -79,21 +79,21 @@ esac
 
 echo "Uncompressed file: $uncompressed_file"
 ```
- **Step 2:** Run the Script<br>
+ **Step 2:** Run the Script.<br>
  >     ./uncompress_research.sh
 +  The script will start searching for a compressed file named "research" with a specific extension (e.g., .gz or .zip) in our Linux filesystem. If it finds the file, it will uncompress it accordingly and provide you with the output.<br><br>
 ### 5) Configure your system in such a way that any user of your system creates a file then there should not be permission to do any activity in that file.<br>
 **Ans:-**  <br>
- **Step 1:** Use umask command for specific session<br>
+ **Step 1:** Use umask command for specific session.<br>
   >       umask 0777
-  **Step 2:** Apply umask to root<br>
+  **Step 2:** Apply umask to root.<br>
   >     sudo nano bash.bashrc  or sudo nano /etc/login.defs
-   - Scroll down and change umask 022 to 0777<br><br>
+   - Scroll down and change umask 022 to 0777.<br><br>
 
 ### 6) Create a service with the name showtime , after starting the service, every minute it should print the current time in a file in the user home directory.<br>                                                                                Ex:-sudo service showtime start -> It should start writing in file.<br>                                                     sudo service showtime stop -> It should stop writing in file. <br>                                                      sudo service showtime status -> It should show status.<br>
  **Ans:-** <br>
 **Step 1:** Create the Shell Script hat will write the current time to a file in the user's home directory.
--  Name the script as showtime.sh and write below content into the file:
+-  Name the script as showtime.sh and write below content into the file.
 ```  ble.sh 
       #!/bin/bash
       FILE_PATH="/home/sigmoid/showtime_output.txt"
@@ -129,5 +129,5 @@ echo "Uncompressed file: $uncompressed_file"
  + Command to stop the service  : ***sudo systemctl stop showtime***<br>
  + Command to check the service status : ***sudo systemctl status showtime***<br>
  1. To check the output of the showtime.sh script, which continuously appends the current time to a file (showtime_output.txt).<br>
- 2.  If we want to continuously monitor the output file in real-time, you can use the tail command with the -f (follow) option: <br>
+ 2.  If we want to continuously monitor the output file in real-time, you can use the tail command with the -f (follow) option. <br>
  >          tail -f ~/showtime_output.txt
