@@ -93,7 +93,7 @@ Ans:-
         ***sudo nano bash.bashrc  or sudo nano /etc/login.defs*** <br>
         - Scroll down and change umask 022 to 0777<br><br>
 
-### 6) Create a service with the name showtime , after starting the service, every minute it should print the current time in a file in the user home directory.<br>   Ex:-sudo service showtime start   -> It should start writing in file. sudo service showtime stop   -> It should stop writing in file.  sudo service showtime status -> It should show status.<br>
+### 6) Create a service with the name showtime , after starting the service, every minute it should print the current time in a file in the user home directory.<br>   Ex:-sudo service showtime start -> It should start writing in file.<br>sudo service showtime stop   -> It should stop writing in file.<br>  sudo service showtime status -> It should show status.<br>
  Ans:-<br>
 Step 1: Create the Shell Script hat will write the current time to a file in the user's home directory.
                - Name the script as showtime.sh and write below content into the file:
