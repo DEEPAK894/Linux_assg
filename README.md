@@ -45,7 +45,7 @@ Step 3: Test the Configuration by typing the describe in the terminal<br><br>
 ### 4) Users can put a compressed file at any path of the linux file system. The name of the file will be research and the extension will be of compression type, example for gzip type extension will be .gz. You have to find the file and check the compression type and uncompress it.<br>
 Ans:-
    Step 1: Create a New Shell Script with file name as uncompress_research.sh using nano command and add the below code into the file.
- ```
+ ``` ble.sh 
  #!/bin/bash
 
 # Find the compressed file named "research" with any compression extension
@@ -97,7 +97,7 @@ Ans:-
  Ans:-<br>
 Step 1: Create the Shell Script hat will write the current time to a file in the user's home directory.
                - Name the script as showtime.sh and write below content into the file:
-```
+``` ble.sh 
  #!/bin/bash
  FILE_PATH="/home/sigmoid/showtime_output.txt"
  while true; do
@@ -108,7 +108,7 @@ Step 1: Create the Shell Script hat will write the current time to a file in the
 Step 2: Make the script executable<br>
            ***chmod +x showtime.sh*** <br>
  Step 3: Create a systemd service file named showtime.service in the ***/etc/systemd/system/*** directory and write the below code into that file.
-  ```  
+  ``` ble.sh  
      [Unit]
      Description=Showtime Service
      After=network.target
